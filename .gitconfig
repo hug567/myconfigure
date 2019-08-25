@@ -1,0 +1,18 @@
+[user]
+	name = hug567
+	email = huangxing567@163.com
+[core]
+	editor = vim
+[credential]
+	helper = store
+[http]
+	postBuffer = 4194304000
+[alias]
+	co = checkout
+	st = status
+	cm = commit -m
+	cs = commit -s
+	dif = diff
+	pl = pull
+	ps = push
+	lg = "log --oneline --graph --pretty=format:\"%C(yellow)%h %Cred[%an]%Creset %Cblue[%ad]%Creset %s %Cgreen(%cr)%Cred%d\" --date=format:'%Y-%m-%d %H:%M:%S' -n 100"
