@@ -17,6 +17,7 @@ filetype plugin indent on
 
 " Display line number
 set number
+set hlsearch
 colorscheme molokai
 
 hi Normal ctermbg=NONE
