@@ -1,21 +1,20 @@
 syntax on
-"-----------------------------------------------"
-" 你在此设置运行时路径
-set rtp+=~/.vim/bundle/Vundle.vim
 
+"-----------------------------------------------"
+" Runtime path
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" 在这里面输入安装的插件
-" Vundle 本身就是一个插件
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 
-"所有插件都应该在这一行之前
 call vundle#end()
-
 filetype off
 filetype plugin indent on
 "-----------------------------------------------"
+
+" Chose color scheme
+colorscheme molokai
 " Display line number
 set number
 " Diaplay tab
@@ -26,22 +25,17 @@ set listchars=tab:>-,trail:-
 set hlsearch
 " Char-by-char highlight during search
 set incsearch
-" Chose color scheme
-colorscheme molokai
-
 " Enable mouse
 set mouse=a
 "set selection=exclusive
 "set selectmode=mouse,key
-
 " Allow curser cross line boundry
-set whichwrap+=<,>,h,l
-
-
+"set whichwrap+=<,>,h,l
 
 " Set background color
 hi Normal ctermbg=NONE
 hi LineNr ctermbg=NONE
+hi Visual ctermbg=238
 
 " Customize shortcut keys
 map <F9> :NERDTree<CR>
