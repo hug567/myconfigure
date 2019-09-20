@@ -37,6 +37,11 @@ set incsearch
 hi Normal ctermbg=NONE
 hi LineNr ctermbg=NONE
 hi Visual ctermbg=238
+"hi Cursor ctermbg=208
+set cursorline
+hi CursorLine ctermbg=237
+hi MatchParen ctermfg=208 ctermbg=240
+
 
 " Customize shortcut keys
 map <F9> :NERDTree<CR>
@@ -53,6 +58,6 @@ map <F6> :TlistOpen<CR>
 map <F7> :TlistClose<CR>
 
 " Highliht blank char at the end of the line
-highlight ExtraWhitespace ctermbg=red guibg=darkgreen
+hi ExtraWhitespace ctermbg=red guibg=darkgreen
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$\| \+\ze\t/
