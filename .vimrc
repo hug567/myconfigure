@@ -1,5 +1,4 @@
 syntax on
-
 "-----------------------------------------------"
 set nocompatible
 filetype off
@@ -9,6 +8,8 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -41,12 +42,12 @@ hi Visual ctermbg=238
 set cursorline
 hi CursorLine ctermbg=237
 hi MatchParen ctermfg=208 ctermbg=240
-
+let &colorcolumn="80"
+hi ColorColumn ctermbg=237
 
 " Customize shortcut keys
 map <F9> :NERDTree<CR>
 
-"
 let Tlist_Show_One_File=1     "不同时显示多个文件的tag，只显示当前文件的
 let Tlist_Exit_OnlyWindow=1   "如果taglist窗口是最后一个窗口，则退出vim
 let Tlist_Ctags_Cmd="/usr/bin/ctags" "将taglist与ctags关联
