@@ -47,6 +47,7 @@ hi ColorColumn ctermbg=237
 
 " Customize shortcut keys
 map <F9> :NERDTree<CR>
+set backspace=indent,eol,start
 
 let Tlist_Show_One_File=1     "不同时显示多个文件的tag，只显示当前文件的
 let Tlist_Exit_OnlyWindow=1   "如果taglist窗口是最后一个窗口，则退出vim
@@ -59,6 +60,6 @@ map <F6> :TlistOpen<CR>
 map <F7> :TlistClose<CR>
 
 " Highliht blank char at the end of the line
-hi ExtraWhitespace ctermbg=red guibg=darkgreen
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+hi ExtraWhitespace ctermbg=red
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red
 match ExtraWhitespace /\s\+$\| \+\ze\t/
