@@ -1,5 +1,6 @@
 syntax on
 "-----------------------------------------------"
+" Vundle插件配置
 set nocompatible
 filetype off
 " Runtime path
@@ -15,26 +16,26 @@ call vundle#end()
 filetype plugin indent on
 "-----------------------------------------------"
 
-" Chose color scheme
+" 设置配色主题
 colorscheme molokai
-" Display line number
+" 显示行号
 set number
-" Diaplay tab
+" 显示tab
 set list
-" Set tab style and display tail space
+" 设置tab显示格式
 set listchars=tab:>-,trail:-
-" Highlight during search
+" 搜索过程中高亮
 set hlsearch
-" Char-by-char highlight during search
+" 逐个字符高亮
 set incsearch
-" Enable mouse
+" 开启鼠标功能
 "set mouse=a
 "set selection=exclusive
 "set selectmode=mouse,key
-" Allow curser cross line boundry
+" 允许光标跨行
 "set whichwrap+=<,>,h,l
 
-" Set background color
+" 自定义主题配置
 hi Normal ctermbg=NONE
 hi LineNr ctermbg=NONE
 hi Visual ctermbg=238
@@ -45,21 +46,25 @@ hi MatchParen ctermfg=208 ctermbg=240
 let &colorcolumn="80"
 hi ColorColumn ctermbg=237
 
-" Customize shortcut keys
+" 打开NERDTree快捷键
 map <F9> :NERDTree<CR>
 set backspace=indent,eol,start
 
-let Tlist_Show_One_File=1     "不同时显示多个文件的tag，只显示当前文件的
-let Tlist_Exit_OnlyWindow=1   "如果taglist窗口是最后一个窗口，则退出vim
-let Tlist_Ctags_Cmd="/usr/bin/ctags" "将taglist与ctags关联
+" 只显示当前文件tag
+let Tlist_Show_One_File=1
+" taglist为最后一个窗口时退出vim
+let Tlist_Exit_OnlyWindow=1
+ "将taglist与ctags关联
+let Tlist_Ctags_Cmd="/usr/bin/ctags"
 "Taglist窗口显示在右侧
 let Tlist_Use_Right_Window =1
-"设置taglist窗口大小
+"设置taglist窗口宽度
 let Tlist_WinWidth = 40
+" 设置开启、关闭快捷键
 map <F6> :TlistOpen<CR>
 map <F7> :TlistClose<CR>
 
-" Highliht blank char at the end of the line
+" 高亮行尾空白符
 hi ExtraWhitespace ctermbg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red
 match ExtraWhitespace /\s\+$\| \+\ze\t/
