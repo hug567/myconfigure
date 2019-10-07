@@ -41,10 +41,10 @@ hi LineNr ctermbg=NONE
 hi Visual ctermbg=238
 "hi Cursor ctermbg=208
 set cursorline
-hi CursorLine ctermbg=237
-hi MatchParen ctermfg=208 ctermbg=240
-let &colorcolumn="80"
-hi ColorColumn ctermbg=237
+hi CursorLine ctermbg=237  " 光标所在行
+hi MatchParen ctermfg=208 ctermbg=240  " 匹配括号
+let &colorcolumn="80"  " 列宽提示宽度
+hi ColorColumn ctermbg=237  " 列宽提示背景色
 " 高亮行尾空白符
 hi ExtraWhitespace ctermbg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red
@@ -52,7 +52,7 @@ match ExtraWhitespace /\s\+$\| \+\ze\t/
 " 高亮函数名
 syn match cFunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>[^()]*)("me=e-2
 syn match cFunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>\s*("me=e-1
-hi cFunctions ctermfg=yellow
+hi cFunctions ctermfg=119  " 淡绿
 
 
 " 打开NERDTree快捷键
