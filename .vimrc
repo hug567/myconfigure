@@ -7,10 +7,10 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'gmarik/Vundle.vim'       "插件管理
+Plugin 'scrooloose/nerdtree'     "目录树
+Plugin 'Valloric/YouCompleteMe'  "自动不全
+Plugin 'ctrlpvim/ctrlp.vim'      "
 
 call vundle#end()
 filetype plugin indent on
@@ -45,6 +45,15 @@ hi CursorLine ctermbg=237
 hi MatchParen ctermfg=208 ctermbg=240
 let &colorcolumn="80"
 hi ColorColumn ctermbg=237
+" 高亮行尾空白符
+hi ExtraWhitespace ctermbg=red
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red
+match ExtraWhitespace /\s\+$\| \+\ze\t/
+" 高亮函数名
+syn match cFunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>[^()]*)("me=e-2
+syn match cFunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>\s*("me=e-1
+hi cFunctions ctermfg=yellow
+
 
 " 打开NERDTree快捷键
 map <F9> :NERDTree<CR>
@@ -63,8 +72,3 @@ let Tlist_WinWidth = 40
 " 设置开启、关闭快捷键
 map <F6> :TlistOpen<CR>
 map <F7> :TlistClose<CR>
-
-" 高亮行尾空白符
-hi ExtraWhitespace ctermbg=red
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red
-match ExtraWhitespace /\s\+$\| \+\ze\t/
