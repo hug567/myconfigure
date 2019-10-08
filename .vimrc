@@ -1,6 +1,6 @@
 syntax on
 "-----------------------------------------------"
-" Vundle插件配置
+" Vundle插件管理器
 set nocompatible
 filetype off
 " Runtime path
@@ -9,13 +9,12 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'       "插件管理
 Plugin 'scrooloose/nerdtree'     "目录树
-Plugin 'Valloric/YouCompleteMe'  "自动不全
-Plugin 'ctrlpvim/ctrlp.vim'      "
+Plugin 'Valloric/YouCompleteMe'  "自动补全
+Plugin 'ctrlpvim/ctrlp.vim'      "模糊搜索
 
 call vundle#end()
 filetype plugin indent on
 "-----------------------------------------------"
-
 " 设置配色主题
 colorscheme molokai
 " 显示行号
@@ -35,16 +34,24 @@ set incsearch
 " 允许光标跨行
 "set whichwrap+=<,>,h,l
 
-" 自定义主题配置
+" 自定义配色
+" 主窗口背景色
 hi Normal ctermbg=NONE
+" 行号列背景色
 hi LineNr ctermbg=NONE
+" VISUAL模式选中背景色
 hi Visual ctermbg=238
+" 光标背景色
 "hi Cursor ctermbg=208
 set cursorline
-hi CursorLine ctermbg=237  " 光标所在行
-hi MatchParen ctermfg=208 ctermbg=240  " 匹配括号
-let &colorcolumn="80"  " 列宽提示宽度
-hi ColorColumn ctermbg=237  " 列宽提示背景色
+" 光标所在行背景色
+hi CursorLine ctermbg=237
+" 匹配括号高亮
+hi MatchParen ctermfg=208 ctermbg=240
+" 列宽提示宽度
+let &colorcolumn="80"
+" 列宽提示背景色
+hi ColorColumn ctermbg=237
 " 高亮行尾空白符
 hi ExtraWhitespace ctermbg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red
@@ -52,8 +59,12 @@ match ExtraWhitespace /\s\+$\| \+\ze\t/
 " 高亮函数名
 syn match cFunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>[^()]*)("me=e-2
 syn match cFunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>\s*("me=e-1
-hi cFunctions ctermfg=119  " 淡绿
-
+hi cFunctions ctermfg=87
+" C语言关键字
+syn keyword cKeywords char short int long float double signed unsisgned
+syn keyword cKeywords if else while switch do return
+syn keyword cKeywords struct typedef void
+hi cKeywords ctermfg=197
 
 " 打开NERDTree快捷键
 map <F9> :NERDTree<CR>
