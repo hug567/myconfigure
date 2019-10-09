@@ -59,12 +59,13 @@ match ExtraWhitespace /\s\+$\| \+\ze\t/
 " 高亮函数名
 syn match cFunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>[^()]*)("me=e-2
 syn match cFunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>\s*("me=e-1
-hi cFunctions ctermfg=87
+hi cFunctions ctermfg=45
 " C语言关键字
-syn keyword cKeywords char short int long float double signed unsisgned
-syn keyword cKeywords if else while switch do return
-syn keyword cKeywords struct typedef void
-hi cKeywords ctermfg=197
+syn keyword cKeywords char short int long float double const signed unsisgned
+syn keyword cKeywords for if else do while switch case break continue goto
+syn keyword cKeywords struct union enum typedef typeof default return
+syn keyword cKeywords auto static register volatile extern void sizeof
+hi cKeywords ctermfg=9
 
 " 打开NERDTree快捷键
 map <F9> :NERDTree<CR>
