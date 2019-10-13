@@ -47,6 +47,8 @@ set cursorline
 hi CursorLine ctermbg=237
 " 高亮匹配括号
 hi MatchParen ctermfg=208 ctermbg=240
+" 搜索高亮
+hi Search ctermbg=220
 " 列宽提示宽度及背景色
 let &colorcolumn="80"
 hi ColorColumn ctermbg=237
@@ -54,31 +56,54 @@ hi ColorColumn ctermbg=237
 hi ExtraWhitespace ctermbg=red
 autocmd ColorScheme * hi ExtraWhitespace ctermbg=red
 match ExtraWhitespace /\s\+$\| \+\ze\t/
+" 字符
+hi Character ctermfg=220
+" 字符串
+hi String ctermfg=220
+" 整型常量
+hi Number ctermfg=141
+" 浮点型常量
+hi Float ctermfg=141
+" if else switch等
+hi Conditional cterm=NONE ctermfg=198
+" for do while等
+hi Repeat cterm=NONE ctermfg=198
+" case default等
+hi Label ctermfg=198
+" sizeof等
+hi Operator ctermfg=198
+" char short int long float double signed unsigned bool void等
+hi Type ctermfg=198
+" auto static register volatile extern const等
+hi StorageClass ctermfg=198
+" struct union enum typedef等
+hi Structure ctermfg=198
+" #define等
+hi Macro ctermfg=198
+" #if #else #endif #ifdef #ifndef等
+hi PreCondit cterm=NONE ctermfg=198
+" #include等
+hi PreProc ctermfg=198
+" \n \t \r \d \u \x \f等转义字符
+hi SpecialChar cterm=NONE ctermfg=198
+" break continue goto return asm等
+hi Statement cterm=NONE ctermfg=198
+" true false等
+hi Constant cterm=NONE ctermfg=141
+" sizeof等
+hi Operator ctermfg=198
 " 高亮函数名
 syn match cFunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>[^()]*)("me=e-2
 syn match cFunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>\s*("me=e-1
 hi cFunctions ctermfg=81
-" 高亮C语言关键字
-syn keyword cKeywords char short int long float double const signed unsisgned
-syn keyword cKeywords for if else do while switch case break continue goto
-syn keyword cKeywords struct union enum typedef typeof default return
-syn keyword cKeywords auto static register volatile extern void sizeof
-syn keyword cKeywords u8 u16 u32 u64 s8 s16 s32 s64
-syn keyword cKeywords U8 U16 U32 U64 S8 S16 S32 S64
-hi cKeywords ctermfg=198
 " 高亮运算符
 syn match cOperators display "[-+*%=<>|.&!^~:]"
 hi cOperators ctermfg=227
-" 常用语法高亮
-hi Character ctermfg=220
-hi String ctermfg=220
-"hi Contional ctermfg=198
-hi Macro ctermfg=198
-hi PreCondit cterm=NONE ctermfg=198
-hi PreProc ctermfg=198
-hi Search ctermbg=220
-hi SpecialChar cterm=NONE ctermfg=198
-hi Statement ctermfg=198
+" 高亮自定义关键字
+syn keyword cKeywords u8 u16 u32 u64 s8 s16 s32 s64
+syn keyword cKeywords U8 U16 U32 U64 S8 S16 S32 S64 typeof
+hi cKeywords ctermfg=198
+
 
 " 打开NERDTree快捷键
 map <F9> :NERDTree<CR>
@@ -97,3 +122,6 @@ let Tlist_WinWidth = 40
 " Taglist开启、关闭快捷键
 map <F6> :TlistOpen<CR>
 map <F7> :TlistClose<CR>
+
+" 取消搜索高亮快捷键
+map <F12> :noh<CR>
