@@ -125,3 +125,5 @@ map <F7> :TlistClose<CR>
 
 " 取消搜索高亮快捷键
 map <F12> :noh<CR>
+" 加载~/.vimrc快捷键
+map <S-F12> :source ~/.vimrc<CR>
