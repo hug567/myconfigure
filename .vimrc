@@ -1,18 +1,7 @@
-syntax on
 "-----------------------------------------------"
-" 插件管理器: Vundle
-set nocompatible
-filetype off
-" Runtime path
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'       "插件管理
-Plugin 'scrooloose/nerdtree'     "目录树
-Plugin 'Valloric/YouCompleteMe'  "自动补全
-Plugin 'ctrlpvim/ctrlp.vim'      "模糊搜索
-
-call vundle#end()
+" 离线插件管理器: pathogen
+execute pathogen#infect()
+syntax on
 filetype plugin indent on
 "-----------------------------------------------"
 " 显示行号
@@ -31,9 +20,7 @@ set listchars=tab:>-,trail:-
 "set mouse=a
 "set selection=exclusive
 "set selectmode=mouse,key
-" 允许光标跨行
-"set whichwrap+=<,>,h,l
-
+"-----------------------------------------------"
 " 主窗口背景色
 hi Normal ctermbg=NONE
 " 行号列背景色
@@ -56,6 +43,13 @@ hi ColorColumn ctermbg=237
 hi ExtraWhitespace ctermbg=red
 autocmd ColorScheme * hi ExtraWhitespace ctermbg=red
 match ExtraWhitespace /\s\+$\| \+\ze\t/
+" 分屏线颜色
+hi VertSplit ctermfg=245 ctermbg=NONE
+" 取消搜索高亮快捷键
+map <F12> :noh<CR>
+" 加载~/.vimrc快捷键
+map <S-F12> :source ~/.vimrc<CR>
+"-----------------------------------------------"
 " 字符
 hi Character ctermfg=220
 " 字符串
@@ -103,8 +97,7 @@ hi cOperators ctermfg=227
 syn keyword cKeywords u8 u16 u32 u64 s8 s16 s32 s64
 syn keyword cKeywords U8 U16 U32 U64 S8 S16 S32 S64 typeof
 hi cKeywords ctermfg=198
-
-
+"-----------------------------------------------"
 " 打开NERDTree快捷键
 map <F9> :NERDTree<CR>
 set backspace=indent,eol,start
@@ -124,29 +117,7 @@ hi NERDTreeFile ctermfg=253
 hi NERDTreeExecFile ctermfg=119
 " 根节点颜色
 hi NERDTreeCWD ctermfg=198
-
-"hi NERDTreeIgnore ctermfg=198 cterm=NONE
-"hi NERDTreeHelpKey ctermfg=198 cterm=NONE
-"hi NERDTreeHelpTitle ctermfg=198 cterm=NONE
-"hi NERDTreeToggleOn ctermfg=198 cterm=NONE
-"hi NERDTreeToggleOff ctermfg=198 cterm=NONE
-"hi NERDTreeHelpCommand ctermfg=198 cterm=NONE
-"hi NERDTreeHelp ctermfg=198 cterm=NONE
-"hi NERDTreeLinkTarget ctermfg=198 cterm=NONE
-"hi NERDTreeLinkFile ctermfg=198 cterm=NONE
-"hi NERDTreeLinkDir ctermfg=198 cterm=NONE
-"hi NERDTreeRO ctermfg=198 cterm=NONE
-"hi NERDTreeBookmark ctermfg=198 cterm=NONE
-"hi NERDTreeLink ctermfg=198 cterm=NONE
-"hi NERDTreeFlags ctermfg=198 cterm=NONE
-"hi NERDTreeNodeDelimiters ctermfg=198 cterm=NONE
-"hi NERDTreeBookmarksLeader ctermfg=198 cterm=NONE
-"hi NERDTreeBookmarksHeader ctermfg=198 cterm=NONE
-"hi NERDTreeBookmarkName ctermfg=198 cterm=NONE
-"hi NERDTreePart ctermfg=198 cterm=NONE
-"hi NERDTreePartFile ctermfg=198 cterm=NONE
-"hi NERDTreeCurrentNode ctermfg=198 cterm=NONE
-
+"-----------------------------------------------"
 " 只显示当前文件tag
 let Tlist_Show_One_File=1
 " Taglist为最后一个窗口时退出vim
@@ -160,8 +131,4 @@ let Tlist_WinWidth = 40
 " Taglist开启、关闭快捷键
 map <F6> :TlistOpen<CR>
 map <F7> :TlistClose<CR>
-
-" 取消搜索高亮快捷键
-map <F12> :noh<CR>
-" 加载~/.vimrc快捷键
-map <S-F12> :source ~/.vimrc<CR>
+"-----------------------------------------------"
