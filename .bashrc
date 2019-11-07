@@ -116,20 +116,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#export PS1="\[\033[0;32;0m\u@\h:\w\$ \]"
-export PS1="\[\e[33;48m\][\u@\h]:\w ~$ \[\e[0;10m\]"
-
+################################# 自定义配置 #################################
 alias lsa="la -a"
 alias cls="clear"
-alias glog="git log --oneline --graph --pretty=format:\"%C(yellow)%h %Cblue[%ad]%Creset %s %Cgreen(%cr)%Cred%d\" --date=format:'%Y-%m-%d %H:%M:%S' -n 100"
-
-
-
-
-
-
-
-
-
-
-
+alias tmux="tmux -2"
+export TERM=xterm-256color
+export PS1="\[\e[33;48m\][\u@\h]:\w ~$ \[\e[0;10m\]"
+# 打开颜色模式
+autoload -U colors && colors
+export GIT_SSL_NO_VERIFY=1
+################################# 自定义配置 #################################

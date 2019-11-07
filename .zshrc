@@ -7,7 +7,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="ys"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -84,27 +85,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-##########--Custom Configuration--##########
-
-#####--General Configuration--#####--1
-alias cls='clear'
-alias lsa='ls -a'
-alias glog='git log --oneline'
-
-# Turn on color mode
+################################# 自定义配置 #################################
+alias lsa="la -a"
+alias cls="clear"
+alias tmux="tmux -2"
+export TERM=xterm-256color
+# 打开颜色模式
 autoload -U colors && colors
-# Custom command line
-export PS1="$fg[yellow][%n@%M]:%~ ~$ $reset_color"
-#####--General Configuration--#####--1
-
-#####--Local Configuration--#####----2
-
-
-
-
-
-
-
-#####--Local Configuration--#####----2
-
-##########--Custom Configuration--##########
+export GIT_SSL_NO_VERIFY=1
+################################# 自定义配置 #################################
