@@ -117,7 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 ################################# 自定义配置 #################################
-alias lsa="la -a"
+alias lsa="ls -a"
 alias cls="clear"
 alias tmux="tmux -2"
 export TERM=xterm-256color
