@@ -64,3 +64,14 @@ unset _ps1_symbol
 # Fixup git-bash in non login env
 shopt -q login_shell || . /etc/profile.d/git-prompt.sh
 
+
+################################# 自定义配置 #################################
+alias lsa="ls -a"
+alias cls="clear"
+alias tmux="tmux -2"
+export TERM=xterm-256color
+#export PS1="\[\e[33;48m\][\u@\h]:\w ~$ \[\e[0;10m\]"
+# 打开颜色模式
+#autoload -U colors && colors
+export GIT_SSL_NO_VERIFY=1
+################################# 自定义配置 #################################
