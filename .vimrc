@@ -99,7 +99,7 @@ syn keyword cKeywords U8 U16 U32 U64 S8 S16 S32 S64 typeof
 hi cKeywords ctermfg=198
 "-----------------------------------------------"
 " 打开NERDTree快捷键
-map <F9> :NERDTree<CR>
+map <F9> :NERDTreeToggle<CR>
 set backspace=indent,eol,start
 " 目录颜色
 hi NERDTreeDir ctermfg=81
