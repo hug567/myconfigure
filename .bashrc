@@ -120,9 +120,13 @@ fi
 alias lsa="ls -a"
 alias cls="clear"
 alias tmux="tmux -2"
+
+# 修复Home、End不可用
+#if [[ -n "$TMUX" ]]; then
+#    bind '"\e[1~":"\eOH"'
+#    bind '"\e[4~":"\eOF"'
+#fi
 export TERM=xterm-256color
 #export PS1="\[\e[33;48m\][\u@\h]:\w ~$ \[\e[0;10m\]"
-# 打开颜色模式
-autoload -U colors && colors
 export GIT_SSL_NO_VERIFY=1
 ################################# 自定义配置 #################################
