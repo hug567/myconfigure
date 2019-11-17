@@ -90,6 +90,10 @@ alias lsa="ls -a"
 alias cls="clear"
 alias tmux="tmux -2"
 export TERM=xterm-256color
+
+# 修复Home、End不可用
+bindkey '\e[1~' beginning-of-line
+bindkey '\e[4~' end-of-line
 # 打开颜色模式
 autoload -U colors && colors
 export GIT_SSL_NO_VERIFY=1
