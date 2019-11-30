@@ -6,8 +6,9 @@
 [credential]
 	helper = store
 [http]
-	postBuffer = 4194304000
+	postBuffer = 1000000000
 [alias]
+	br = branch
 	co = checkout
 	st = status
 	cm = commit -m
