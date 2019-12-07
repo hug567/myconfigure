@@ -86,6 +86,8 @@ hi Statement cterm=NONE ctermfg=198
 hi Constant cterm=NONE ctermfg=141
 " sizeof等
 hi Operator ctermfg=198
+" 根据文件后缀加载配置文件
+autocmd BufNewFile,BufRead *.c source ~/.vim/scripts/myc.vim
 autocmd BufNewFile,BufRead *.h source ~/.vim/scripts/myc.vim
 "-----------------------------------------------"
 " 打开NERDTree快捷键
