@@ -124,3 +124,6 @@ let Tlist_WinWidth = 40
 map <F6> :TlistOpen<CR>
 map <F7> :TlistClose<CR>
 "-----------------------------------------------"
+let &t_SI.="\e[5 q" "SI = INSERT mode
+let &t_SR.="\e[2 q" "SR = REPLACE mode
+let &t_EI.="\e[2 q" "EI = NORMAL mode (ELSE)
