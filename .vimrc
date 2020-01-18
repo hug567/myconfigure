@@ -20,6 +20,10 @@ set listchars=tab:>-,trail:-
 "set mouse=a
 "set selection=exclusive
 "set selectmode=mouse,key
+" 设置光标样式
+let &t_SI.="\e[2 q" "INSERT模式，2:方块
+let &t_SR.="\e[2 q" "REPLACE模式, 2:方块
+let &t_EI.="\e[2 q" "NORMAL模式, 2:方块
 "-----------------------------------------------"
 " 主窗口背景色
 hi Normal ctermbg=NONE
