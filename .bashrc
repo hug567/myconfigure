@@ -117,6 +117,16 @@ if ! shopt -oq posix; then
 fi
 
 ################################# 自定义配置 #################################
+BLACK="\033[30m"
+RED="\[\e[31m\]"
+GREEN="\033[32m"
+YELLOW="\033[33m"
+BLUE="\033[34m"
+PURPLE="\033[35m"
+SKYBLUE="\033[36m"
+WHITE="\033[37m"
+RESET="\033[0m"
+
 alias lsa="ls -a"
 alias cls="clear"
 alias tmux="tmux -2"
@@ -127,6 +137,11 @@ alias tmux="tmux -2"
 #    bind '"\e[4~":"\eOF"'
 #fi
 export TERM=xterm-256color
-#export PS1="\[\e[33;48m\][\u@\h]:\w ~$ \[\e[0;10m\]"
 export GIT_SSL_NO_VERIFY=1
+
+#[[ $(declare -p PS1 2>/dev/null | cut -c 1-11) = 'declare -x ' ]] || \
+export PS1='\[\e]0;\w\a\]\n\[\e[32m\][\u@\h]:\[\e[35m\]$MSYSTEM\[\e[0m\] \
+\[\e[33m\]\w\[\e[0m\]\n'"${_ps1_symbol}"' \[\e[31m\]$\[\e[0m\] '
+#unset _ps1_symbol
+
 ################################# 自定义配置 #################################
