@@ -10,6 +10,7 @@
 [alias]
 	co = checkout
 	st = status
+	ci = commit
 	cm = commit -m
 	cs = commit -s
 	dif = diff
