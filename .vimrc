@@ -93,6 +93,7 @@ hi Operator ctermfg=198
 " 根据文件后缀加载配置文件
 autocmd BufNewFile,BufRead *.c source ~/.vim/scripts/myc.vim
 autocmd BufNewFile,BufRead *.h source ~/.vim/scripts/myc.vim
+autocmd BufNewFile,BufRead *.py source ~/.vim/scripts/mypython.vim
 "-----------------------------------------------"
 " 打开NERDTree快捷键
 map <F9> :NERDTreeToggle<CR>
