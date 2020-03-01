@@ -69,6 +69,7 @@ shopt -q login_shell || . /etc/profile.d/git-prompt.sh
 alias lsa="ls -a"
 alias cls="clear"
 alias tmux="tmux -2"
+alias make="mingw32-make"
 export TERM=xterm-256color
 #export PS1="\[\e[33;48m\][\u@\h]:\w ~$ \[\e[0;10m\]"
 # 打开颜色模式

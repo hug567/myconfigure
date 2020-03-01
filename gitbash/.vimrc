@@ -49,6 +49,10 @@ hi VertSplit ctermfg=245 ctermbg=NONE
 map <F12> :noh<CR>
 " 加载~/.vimrc快捷键
 map <S-F12> :source ~/.vimrc<CR>
+" 设置光标样式 (1-6)
+let &t_SI.="\e[2 q" "插入模式：方块
+let &t_SR.="\e[2 q" "替换模式：方块
+let &t_EI.="\e[2 q" "常规模式：方块
 "-----------------------------------------------"
 " 字符
 hi Character ctermfg=220
@@ -124,6 +128,3 @@ let Tlist_WinWidth = 40
 map <F6> :TlistOpen<CR>
 map <F7> :TlistClose<CR>
 "-----------------------------------------------"
-let &t_SI.="\e[5 q" "SI = INSERT mode
-let &t_SR.="\e[2 q" "SR = REPLACE mode
-let &t_EI.="\e[2 q" "EI = NORMAL mode (ELSE)
