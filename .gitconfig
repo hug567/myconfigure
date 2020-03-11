@@ -6,12 +6,11 @@
 [credential]
 	helper = store
 [http]
-	postBuffer = 4194304000
+	postBuffer = 104857600
 [alias]
 	co = checkout
 	st = status
-	ci = commit
-	cm = commit -m
+	cm = commit
 	cs = commit -s
 	dif = diff
 	pl = pull
