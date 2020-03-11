@@ -11,8 +11,7 @@
 	br = branch
 	co = checkout
 	st = status
-	ci = commit
-	cm = commit -m
+	cm = commit
 	cs = commit -s
 	dif = diff
 	pl = pull
