@@ -54,6 +54,8 @@ let &t_SI.="\e[2 q" "插入模式：方块
 let &t_SR.="\e[2 q" "替换模式：方块
 let &t_EI.="\e[2 q" "常规模式：方块
 "-----------------------------------------------"
+" 注释
+hi Comment ctermfg=245
 " 字符
 hi Character ctermfg=220
 " 字符串
