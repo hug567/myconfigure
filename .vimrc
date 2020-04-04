@@ -30,7 +30,7 @@ hi Normal ctermbg=NONE
 " 行号列背景色
 hi LineNr ctermbg=NONE
 " VISUAL模式选中背景色
-hi Visual ctermbg=238
+hi Visual ctermfg=235 ctermbg=228
 " 光标背景色
 "hi Cursor ctermbg=208
 " 光标所在行背景色
