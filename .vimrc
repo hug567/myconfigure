@@ -54,6 +54,8 @@ map <F12> :noh<CR>
 " 加载~/.vimrc快捷键
 map <S-F12> :source ~/.vimrc<CR>
 "-----------------------------------------------"
+" 注释
+hi Comment ctermfg=245
 " 字符
 hi Character ctermfg=220
 " 字符串
