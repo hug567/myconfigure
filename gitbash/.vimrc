@@ -92,13 +92,12 @@ hi Statement cterm=NONE ctermfg=198
 hi Constant cterm=NONE ctermfg=141
 " sizeof等
 hi Operator ctermfg=198
-" 自动加载C语言配置文件
-autocmd BufNewFile,BufRead *.c source ~/.vim/scripts/myc.vim
-autocmd BufNewFile,BufRead *.h source ~/.vim/scripts/myc.vim
 "-----------------------------------------------"
 " 打开NERDTree快捷键
 map <F9> :NERDTreeToggle<CR>
 set backspace=indent,eol,start
+" 排除文件
+let NERDTreeIgnore = ['\.exe$']
 " 目录颜色
 hi NERDTreeDir ctermfg=81
 " 目录斜线颜色
@@ -129,4 +128,9 @@ let Tlist_WinWidth = 40
 " Taglist开启、关闭快捷键
 map <F6> :TlistOpen<CR>
 map <F7> :TlistClose<CR>
+"-----------------------------------------------"
+" 根据扩展名自动加载配置文件
+autocmd BufNewFile,BufRead *.c source ~/.vim/scripts/myc.vim
+autocmd BufNewFile,BufRead *.h source ~/.vim/scripts/myc.vim
+autocmd BufNewFile,BufRead *.cpp source ~/.vim/scripts/mycpp.vim
 "-----------------------------------------------"
