@@ -20,6 +20,14 @@ set listchars=tab:>-,trail:-
 "set mouse=a
 "set selection=exclusive
 "set selectmode=mouse,key
+" 设置tab键默认为4个空格
+set ts=4
+set sts=4
+" 自动缩进空格数
+set sw=4
+set expandtab
+" 自动缩进
+set autoindent
 "-----------------------------------------------"
 " 主窗口背景色
 hi Normal ctermbg=NONE
